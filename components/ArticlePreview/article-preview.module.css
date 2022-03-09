@@ -4,6 +4,10 @@
     color: var(--color-text);
 }
 
+.article:hover .title {
+    color: var(--color-primary);
+}
+
 .title {
     margin: 0 0 10px;
     font-family: var(--font-primary);
@@ -13,6 +17,7 @@
     text-underline-offset: 3px;
     text-decoration-thickness: 3px;
     text-decoration-color: var(--color-primary);
+    transition: color 0.2s;
 }
 
 .text {
