@@ -1,0 +1,30 @@
+.article {
+    display: block;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.title {
+    margin: 0 0 10px;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    line-height: 26px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--color-primary);
+}
+
+.text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@media (min-width: 1024px) {
+    .title {
+        margin-bottom: 12px;
+        font-size: 28px;
+        line-height: 1.4;
+    }
+}

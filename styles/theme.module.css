@@ -1,0 +1,58 @@
+.page {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 810px;
+    box-sizing: border-box;
+}
+
+.h1 {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 27px;
+    line-height: 32px;
+}
+
+.text {
+    margin: 0;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 15px;
+    line-height: 18px;
+}
+
+@media (min-width: 744px) {
+    .h1 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .text {
+        font-size: 18px;
+        line-height: 27px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .h1 {
+        font-size: 50px;
+        line-height: 52px;
+    }
+
+    .button {
+        padding: 16px 32px;
+        font-size: 18px;
+    }
+}

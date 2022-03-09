@@ -1,0 +1,32 @@
+.header {
+    border-bottom: 1px solid var(--color-header-border);
+}
+
+.h1 {
+    margin-bottom: 20px;
+}
+
+.list {
+    padding: 20px 0;
+    display: grid;
+    gap: 30px;
+}
+
+@media (min-width: 744px) {
+    .list {
+        padding: 30px 0;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .h1 {
+        margin-bottom: 30px;
+    }
+
+    .list {
+        padding: 50px 0;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}

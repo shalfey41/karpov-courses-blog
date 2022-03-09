@@ -1,0 +1,39 @@
+.h1 {
+    margin-bottom: 20px;
+}
+
+.article {
+    margin-bottom: 40px;
+}
+
+.article p + p {
+    margin-top: 20px;
+}
+
+.button {
+    width: 100%;
+}
+
+@media (min-width: 744px) {
+    .h1 {
+        margin-bottom: 30px;
+    }
+
+    .article {
+        margin-bottom: 50px;
+    }
+
+    .article p + p {
+        margin-top: 30px;
+    }
+
+    .button {
+        width: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .h1 {
+        margin-bottom: 40px;
+    }
+}

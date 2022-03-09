@@ -1,16 +1,29 @@
-html,
+@import "~normalize.css";
+
+:root {
+  --color-text: #161618;
+  --color-background: #FCFDFF;
+  --color-primary: #0185FF;
+  --color-white: #FCFDFF;
+  --color-header-border: #161618;
+
+  --font-primary: 'Raleway', sans-serif;
+  --font-text: 'Merriweather', serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #FCFDFF;
+    --color-background: #161618;
+    --color-header-border: #8B9292;
+  }
+}
+
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+  font-family: var(--font-text);
+  font-size: 14px;
+  line-height: 22px;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
