@@ -2,6 +2,7 @@ import React from 'react';
 import type { NextPage } from 'next';
 import { Posts } from '../components/Posts/Posts';
 import { IArticlePreview } from '../types/ArticlePreview';
+import { ArticlesAPI } from '../types/api';
 
 interface Props {
   articles: IArticlePreview[];
@@ -12,25 +13,27 @@ const Home: NextPage<Props> = ({ articles }) => {
 };
 
 export async function getStaticProps() {
+  const response = await fetch(
+    'https://desolate-tundra-55098.herokuapp.com/api/articles?sort[0]=publishedAt:desc',
+  );
+  const { data }: ArticlesAPI = await response.json();
+  const articles: IArticlePreview[] = data.map((item) => {
+    const text = new Intl.DateTimeFormat('ru-RU', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
+    }).format(new Date(item.attributes.publishedAt));
+
+    return {
+      title: item.attributes.title,
+      text,
+      slug: item.attributes.slug,
+    };
+  });
+
   return {
     props: {
-      articles: [
-        {
-          title: 'Когда времени на раскачку нет',
-          text: '12 января 2022',
-          slug: 'my-page',
-        },
-        {
-          title: 'Удаленка vs работа в офисе',
-          text: '23 июня 2021',
-          slug: 'my-page2',
-        },
-        {
-          title: 'Как быстро запускать проекты',
-          text: '19 мая 2021',
-          slug: 'my-page3',
-        },
-      ],
+      articles,
     },
   };
 }
